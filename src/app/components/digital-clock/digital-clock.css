@@ -92,26 +92,72 @@
 }
 
 @media (orientation: landscape) and (max-height: 600px) {
+  .clock-header {
+    margin-bottom: 0.35rem;
+  }
+
+  .label {
+    font-size: 0.58rem;
+  }
+
+  .format-switch button {
+    padding: 0.22rem 0.4rem;
+    font-size: 0.58rem;
+  }
+
   .time {
-    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    font-size: clamp(2.7rem, 7vw, 3.7rem);
   }
 
-  .timezone {
-    margin-top: 0.8rem;
-    font-size: 1.15rem;
-  }
-
-  .date {
+  .seconds {
+    margin-top: 0.35rem;
     font-size: 0.8rem;
   }
 
+  .period {
+    margin-bottom: 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .timezone {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .date {
+    margin-top: 0.2rem;
+    font-size: 0.72rem;
+  }
+
+  .time-details {
+    margin-top: 0.2rem;
+    font-size: 0.68rem;
+  }
+
+  .zone-name {
+    margin-top: 0.15rem;
+    font-size: 0.6rem;
+  }
+
   .location-button {
-    margin-top: 0.8rem;
-    padding: 0.55rem 0.8rem;
+    margin-top: 0.55rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 9px;
+    font-size: 0.72rem;
+  }
+
+  .attribution {
+    margin-top: 0.3rem;
+    font-size: 0.52rem;
   }
 
   .live {
-    margin-top: 1rem;
+    margin-top: 0.55rem;
+    font-size: 0.58rem;
+  }
+
+  .live-dot {
+    width: 7px;
   }
 }
 .location-button {

@@ -29,3 +29,20 @@ select:focus {
   border-color: #8f7cff;
   box-shadow: 0 0 0 3px rgb(143 124 255 / 15%);
 }
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .city-selector {
+    margin-bottom: 0.65rem;
+  }
+
+  label {
+    margin-bottom: 0.25rem;
+    font-size: 0.55rem;
+  }
+
+  select {
+    padding: 0.5rem 2rem 0.5rem 0.7rem;
+    border-radius: 9px;
+    font-size: 0.8rem;
+  }
+}

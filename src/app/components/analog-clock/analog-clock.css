@@ -79,16 +79,29 @@
 
 @media (orientation: landscape) and (max-height: 600px) {
   .clock-face {
-    width: min(58dvh, 250px);
-    border-radius: 28px;
+    width: min(52dvh, 205px);
+    border-radius: 25px;
   }
 
   .number {
-    inset: 13px;
-    font-size: 1rem;
+    inset: 11px;
+    font-size: 0.85rem;
+  }
+
+  .hour-hand {
+    width: 6px;
+  }
+
+  .minute-hand {
+    width: 4px;
+  }
+
+  .second-hand {
+    width: 2px;
   }
 
   .center-dot {
-    width: 14px;
+    width: 12px;
+    border-width: 3px;
   }
 }

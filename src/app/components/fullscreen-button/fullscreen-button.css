@@ -43,3 +43,18 @@ svg {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+@media (orientation: landscape) and (max-height: 600px) {
+  :host {
+    top: max(0.55rem, env(safe-area-inset-top));
+    right: max(0.65rem, env(safe-area-inset-right));
+  }
+
+  .fullscreen-button {
+    width: 36px;
+    border-radius: 10px;
+  }
+
+  svg {
+    width: 18px;
+  }
+}
