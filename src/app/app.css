@@ -119,10 +119,17 @@
 
   .clock-card {
     width: min(92vw, 860px);
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 1.25rem;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(230px, 0.8fr);
+    gap: 0.8rem;
     padding: 0.7rem 1.1rem;
     border-radius: 24px;
+  }
+
+  app-analog-clock {
+    justify-self: center;
+    align-self: center;
   }
 }
 .information-panel {

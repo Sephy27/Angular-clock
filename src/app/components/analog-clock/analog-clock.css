@@ -78,22 +78,25 @@
 }
 
 @media (orientation: landscape) and (max-height: 600px) {
+  :host{
+    display: block;
+  }
   .clock-face {
-    width: min(52dvh, 205px);
-    border-radius: 25px;
+    width: min(60dvh, 230px);
+    border-radius: 27px;
   }
 
   .number {
-    inset: 11px;
-    font-size: 0.85rem;
+    inset: 12px;
+    font-size: 0.9rem;
   }
 
   .hour-hand {
-    width: 6px;
+    width: 7px;
   }
 
   .minute-hand {
-    width: 4px;
+    width: 5px;
   }
 
   .second-hand {
@@ -101,7 +104,7 @@
   }
 
   .center-dot {
-    width: 12px;
+    width: 14px;
     border-width: 3px;
   }
 }
