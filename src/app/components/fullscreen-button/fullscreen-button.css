@@ -1,0 +1,45 @@
+:host {
+  position: fixed;
+  top: max(1rem, env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  z-index: 100;
+}
+
+.fullscreen-button {
+  width: 44px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 12px;
+  color: #d9d9e8;
+  background: rgb(17 20 38 / 80%);
+  box-shadow: 0 8px 25px rgb(0 0 0 / 25%);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.fullscreen-button:hover {
+  color: #ffffff;
+  background: rgb(112 96 232 / 40%);
+  transform: translateY(-2px);
+}
+
+.fullscreen-button:focus-visible {
+  outline: 3px solid rgb(143 124 255 / 40%);
+  outline-offset: 3px;
+}
+
+svg {
+  width: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

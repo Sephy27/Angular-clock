@@ -1,0 +1,92 @@
+<section class="digital-clock">
+  <div class="clock-header">
+    <p class="label">HEURE MONDIALE</p>
+
+    <div class="format-switch">
+      <button
+        type="button"
+        [class.active]="format24h()"
+        [attr.aria-pressed]="format24h()"
+        (click)="changerFormat(true)"
+      >
+        24 h
+      </button>
+
+      <button
+        type="button"
+        [class.active]="!format24h()"
+        [attr.aria-pressed]="!format24h()"
+        (click)="changerFormat(false)"
+      >
+        12 h
+      </button>
+    </div>
+  </div>
+
+  <p class="time">
+    {{ heureFormatee().heures }}:{{ heureFormatee().minutes }}
+
+    <span class="seconds">
+      {{ heureFormatee().secondes }}
+    </span>
+
+    @if (!format24h()) {
+      <span class="period">
+        {{ heureFormatee().periode }}
+      </span>
+    }
+  </p>
+
+  <p class="timezone">
+    {{ nomVille() }}
+  </p>
+
+  <p class="date">
+    {{ dateFormatee() }}
+  </p>
+
+  <p class="time-details">
+    {{ jourRelatif() }} · {{ ecartHeureLocale() }}
+  </p>
+
+  <p class="zone-name">
+    {{ fuseauHoraire() }} · {{ decalageUtc() }}
+  </p>
+
+  <button
+    class="location-button"
+    type="button"
+    [disabled]="localisationEnCours()"
+    (click)="detecterVille()"
+  >
+    @if (localisationEnCours()) {
+      Localisation…
+    } @else {
+      Utiliser ma position
+    }
+  </button>
+
+  @if (erreurLocalisation()) {
+    <p class="location-error">
+      {{ erreurLocalisation() }}
+    </p>
+  }
+
+  @if (positionDetectee()) {
+    <a
+      class="attribution"
+      href="https://www.openstreetmap.org/copyright"
+      target="_blank"
+      rel="noopener"
+    >
+      Données © OpenStreetMap
+    </a>
+  }
+
+  <div class="live">
+    <span class="live-dot"></span>
+    <span>EN DIRECT</span>
+    <span class="separator">·</span>
+    <span class="synchronised">Synchronisée</span>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<div class="city-selector">
+  <label for="city">Ville affichée</label>
+
+  <select
+    id="city"
+    [ngModel]="clock.villeSelectionneeId()"
+    (ngModelChange)="clock.selectionnerVille($event)"
+  >
+    @for (ville of clock.villes(); track ville.id) {
+      <option [value]="ville.id">
+        {{ ville.nom }}
+        {{ ville.pays ? ', ' + ville.pays : '' }}
+      </option>
+    }
+  </select>
+</div>

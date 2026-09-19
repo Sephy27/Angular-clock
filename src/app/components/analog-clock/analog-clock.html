@@ -1,0 +1,38 @@
+<div
+  class="clock-face"
+  role="img"
+  [attr.aria-label]="
+    'Horloge analogique de ' +
+    clock.villeSelectionnee().nom
+  "
+>
+  @for (nombre of nombres; track nombre.valeur) {
+    <div
+      class="number"
+      [style.transform]="'rotate(' + nombre.angle + 'deg)'"
+    >
+      <span
+        [style.transform]="'rotate(-' + nombre.angle + 'deg)'"
+      >
+        {{ nombre.valeur }}
+      </span>
+    </div>
+  }
+
+  <div
+    class="hand hour-hand"
+    [style.transform]="'rotate(' + angleHeures() + 'deg)'"
+  ></div>
+
+  <div
+    class="hand minute-hand"
+    [style.transform]="'rotate(' + angleMinutes() + 'deg)'"
+  ></div>
+
+  <div
+    class="hand second-hand"
+    [style.transform]="'rotate(' + angleSecondes() + 'deg)'"
+  ></div>
+
+  <div class="center-dot"></div>
+</div>

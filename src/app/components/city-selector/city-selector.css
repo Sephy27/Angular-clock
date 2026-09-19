@@ -1,0 +1,31 @@
+.city-selector {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #8d91ac;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+select {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 0.9rem;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 12px;
+  color: #ffffff;
+  background: #111426;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+select:focus {
+  border-color: #8f7cff;
+  box-shadow: 0 0 0 3px rgb(143 124 255 / 15%);
+}
